@@ -6,17 +6,17 @@ import D from "../assets/d.png";
 
 function Blog() {
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center w-100 text-dark mx-5">
+    <div className="d-flex flex-column justify-content-center align-items-center w-100 text-dark">
       <div className="mb-4">
         <h2>Travel Memories</h2>
       </div>
-      <div className="d-flex flex-row gap-5">
+      <div className="d-flex flex-row justify-content-start gap-3">
           <div
             className="image-container d-flex flex-row align-items-center justify-content-center"
             style={{
               border: "rgba(0, 60, 130, 1) solid 1.5px",
               borderRadius: "20px",
-              height: "35rem",
+              height: "30rem",
               width: "20rem",
               flexShrink: 0,
               overflow: "hidden",
@@ -28,8 +28,8 @@ function Blog() {
               className="image"
               style={{
                 objectFit: "cover",
-                height: "94%",
-                width: "90%",
+                height: "95%",
+                width: "93%",
                 borderRadius: "15px",
                 transition: "all 0.3s ease-in-out",
               }}
@@ -47,7 +47,7 @@ function Blog() {
             style={{
               border: "rgba(0, 60, 130, 1) solid 1.5px",
               borderRadius: "20px",
-              height: "19rem",
+              height: "14rem",
               width: "40rem",
               flexShrink: 0,
               overflow: "hidden",
@@ -72,14 +72,14 @@ function Blog() {
               <p> 45 Travelers</p>
             </div>
           </div>
-          <div className="d-flex felx-row" style={{gap:"2em"}}>
+          <div className="d-flex felx-row gap-3" style={{gap:"2em"}}>
             <div
             className="image-container d-flex flex-row align-items-center justify-content-center"
             style={{
               border: "rgba(0, 60, 130, 1) solid 1.5px",
               borderRadius: "20px",
               height: "15rem",
-              width: "19rem",
+              width: "19.5rem",
               flexShrink: 0,
               overflow: "hidden",
               position: "relative",
@@ -91,7 +91,7 @@ function Blog() {
               style={{
                 objectFit: "cover",
                 height: "94%",
-                width: "90%",
+                width: "94%",
                 borderRadius: "15px",
                 transition: "all 0.3s ease-in-out",
               }}
@@ -109,7 +109,7 @@ function Blog() {
               border: "rgba(0, 60, 130, 1) solid 1.5px",
               borderRadius: "20px",
               height: "15rem",
-              width: "19rem",
+              width: "19.5rem",
               flexShrink: 0,
               overflow: "hidden",
               position: "relative",
@@ -121,7 +121,7 @@ function Blog() {
               style={{
                 objectFit: "cover",
                 height: "94%",
-                width: "90%",
+                width: "94%",
                 borderRadius: "15px",
                 transition: "all 0.3s ease-in-out",
               }}

@@ -34,7 +34,7 @@ function About() {
           ingin membantu klien kami menciptakan kenangan yang akan bertahan
           seumur hidup.
         </p>
-        <p
+        {/* <p
           className=""
           style={{
             fontSize: "0.3em",
@@ -47,7 +47,7 @@ function About() {
           pemahaman mendalam tentang budaya dan destinasi yang berbeda, dan kami
           dapat membantu Anda merencanakan perjalanan yang sempurna sesuai
           kebutuhan dan minat Anda.
-        </p>
+        </p> */}
         <div className="d-flex flex-row justify-content-between w-100">
           <div>
             <h3 className="m-0">800+</h3>
