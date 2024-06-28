@@ -5,9 +5,10 @@ import NTT from "../assets/sambori.png";
 import Bali from "../assets/bali.jpg"
 function Trip() {
   const handleBookingClick = (destination) => {
-    alert(`Booking for ${destination} initiated!`);
-    // Implement further booking logic here
+    const whatsappLink = `https://chat.whatsapp.com/FOFe150b4XPL59YvWWM7C3`;
+    window.open(whatsappLink, '_blank');
   };
+  
 
   return (
     <div className="d-flex justify-content-center align-items-center w-100 fs-1 p-3">

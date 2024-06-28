@@ -53,7 +53,7 @@ function About() {
         </p>
         <div className="d-flex flex-row justify-content-between w-100 mt-4">
           <div>
-            <h3 className="m-0 fs-5 fs-md-3">800+</h3>
+            <h3 className="m-0 fs-5 fs-md-3">170+</h3>
             <p
               className="fs-6 fs-md-5"
               style={{ fontWeight: "normal", margin: "0px" }}
@@ -62,7 +62,7 @@ function About() {
             </p>
           </div>
           <div>
-            <h3 className="m-0 fs-5 fs-md-3">200+</h3>
+            <h3 className="m-0 fs-5 fs-md-3">27+</h3>
             <p
               className="fs-6 fs-md-5"
               style={{ fontWeight: "normal", margin: "0px" }}
