@@ -10,7 +10,7 @@ function Trip() {
 
   return (
     <div className="d-flex justify-content-center align-items-center w-100 fs-1 p-3">
-      <div className="overflow-auto" style={{ maxWidth: "100%" }}>
+      <div className="overflow-auto no-scrollbar" style={{ maxWidth: "100%" }}>
         <div
           className="d-flex flex-column flex-lg-row justify-content-center align-items-center"
           style={{ width: "100%" }}
@@ -49,7 +49,7 @@ function Trip() {
           </div>
 
           <div
-            className="d-flex overflow-auto"
+            className="d-flex overflow-auto no-scrollbar"
             style={{ gap: "1rem", maxWidth: "100%" }}
           >
             <div
@@ -79,7 +79,7 @@ function Trip() {
               />
               <div className="overlay">
                 <h4>Lombok</h4>
-                <p>$500</p>
+                <p>Rp 5 Jt</p>
                 <button className="tombol btn btn-primary" onClick={() => handleBookingClick('Lombok')}>Book Now</button>
               </div>
             </div>
@@ -110,7 +110,7 @@ function Trip() {
               />
               <div className="overlay">
                 <h4>NTT</h4>
-                <p>$600</p>
+                <p>Rp 5 Jt</p>
                 <button className="tombol btn btn-primary" onClick={() => handleBookingClick('NTT')}>Book Now</button>
               </div>
             </div>
@@ -141,7 +141,7 @@ function Trip() {
               />
               <div className="overlay">
                 <h4>Lombok</h4>
-                <p>$500</p>
+                <p>Rp 5 Jt</p>
                 <button className=" tombol btn btn-primary" onClick={() => handleBookingClick('Lombok')}>Book Now</button>
               </div>
             </div>
@@ -149,6 +149,15 @@ function Trip() {
         </div>
       </div>
       <style>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+
+        .no-scrollbar {
+          -ms-overflow-style: none;  /* Internet Explorer 10+ */
+          scrollbar-width: none;  /* Firefox */
+        }
+
         .image-container {
           position: relative;
           overflow: hidden;
