@@ -54,7 +54,7 @@ function Header() {
             <FaBars color="white" />
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav>
+            <Nav className="custom-navbar">
               <Nav.Link href="#home" className="text-light">Home</Nav.Link>
               <Nav.Link href="#about" className="text-light">About</Nav.Link>
               <Nav.Link href="#trip" className="text-light">Trip</Nav.Link>
@@ -85,7 +85,7 @@ function Header() {
         <Trip />
       </div>
       <div id="blog" className="d-flex align-items-center bg-light" style={{ minHeight: "100vh" }}>
-        <Blog />
+        {/* <Blog /> */}
       </div>
       <div id="reviews" className="d-flex align-items-center" style={{ minHeight: "100vh" }}>
         <Reviews />
@@ -93,6 +93,15 @@ function Header() {
       <div className="d-flex bg-secondary" style={{ height: "100vh" }}>
         <Footer />
       </div>
+      <style>
+        {`
+        .custom-navbar{
+        border: white solid 1px;
+        border-radius: 20px;
+        padding: 0px 25px;
+        }
+        `}
+      </style>
     </>
   );
 }
