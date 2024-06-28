@@ -6,9 +6,12 @@ import Blog from "./Blog";
 import Reviews from "./Reviews";
 import Footer from "./Footer";
 import Background from "../assets/home.png";
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import { FaBars } from 'react-icons/fa';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,44 +32,38 @@ function Header() {
 
   return (
     <>
-      <div
-        className="d-flex flex-row w-100 fixed-top text-light py-3"
+      <Navbar
+        expand="lg"
+        fixed="top"
+        expanded={expanded}
+        onToggle={setExpanded}
         style={{
           backgroundColor: isScrolled ? "rgba(0, 60, 130, 1)" : "transparent",
           transition: "background-color 0.3s",
           borderRadius: "0px 0px 16px 16px",
         }}
       >
-        <div className="d-flex flex-row justify-content-between align-items-center mx-5 w-100">
-          <div>
-            <h3>IndoVentures</h3>
-          </div>
-          <div
-            className="d-flex flex-row gap-3"
-            style={{
-              border: "white solid 1px",
-              borderRadius: "20px",
-              padding: "0.5em 2em",
-            }}
+        <Container>
+          <Navbar.Brand className="text-light" href="#home">
+            IndoVentures
+          </Navbar.Brand>
+          <Navbar.Toggle 
+            aria-controls="basic-navbar-nav" 
+            onClick={() => setExpanded(!expanded)}
           >
-            <a href="#home" className="text-decoration-none text-light">
-              Home
-            </a>
-            <a href="#about" className="text-decoration-none text-light">
-              About
-            </a>
-            <a href="#trip" className="text-decoration-none text-light">
-              Trip
-            </a>
-            <a href="#blog" className="text-decoration-none text-light">
-              Blog
-            </a>
-            <a href="#reviews" className="text-decoration-none text-light">
-              Reviews
-            </a>
-          </div>
-        </div>
-      </div>
+            <FaBars color="white" />
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav>
+              <Nav.Link href="#home" className="text-light">Home</Nav.Link>
+              <Nav.Link href="#about" className="text-light">About</Nav.Link>
+              <Nav.Link href="#trip" className="text-light">Trip</Nav.Link>
+              <Nav.Link href="#blog" className="text-light">Blog</Nav.Link>
+              <Nav.Link href="#reviews" className="text-light">Reviews</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <div id="home" className="d-flex align-items-center " style={{ minHeight: "100vh" }}>
         <img
           src={Background}
