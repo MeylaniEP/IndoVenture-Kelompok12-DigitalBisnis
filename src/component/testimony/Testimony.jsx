@@ -83,6 +83,12 @@ function Testimony() {
           padding: 5px 0;
           font-size: 0.8em;
         }
+         @media (max-width: 576px) {
+         .testimony-container {
+          
+        }
+         }
+         
       `}</style>
     </div>
   );

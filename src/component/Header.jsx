@@ -1,16 +1,42 @@
-// import React from "react";
+// import React, { useState, useEffect } from "react";
 // import Home from "./Home";
 // import About from "./About";
 // import Trip from "./Trip";
 // import Blog from "./Blog";
 // import Reviews from "./Reviews";
 // import Footer from "./Footer";
-// import Background from "../assets/picture.png";
+// import Background from "../assets/home.png";
 
 // function Header() {
+//   const [isScrolled, setIsScrolled] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollHeight = window.innerHeight / 2;
+//       if (window.scrollY > scrollHeight) {
+//         setIsScrolled(true);
+//       } else {
+//         setIsScrolled(false);
+//       }
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
 //   return (
 //     <>
-//       <div className="d-flex flex-row w-100 fixed-top bg-transparant text-light mt-4">
+//       <div
+//         className="d-flex flex-row w-100 fixed-top text-light py-3"
+//         style={{
+//           backgroundColor: isScrolled ? "rgba(0, 60, 130, 1)" : "transparent",
+//           transition: "background-color 0.3s",
+//           borderRadius: "0px 0px 16px 16px",
+//         }}
+//       >
 //         <div className="d-flex flex-row justify-content-between align-items-center mx-5 w-100">
 //           <div>
 //             <h3>IndoVentures</h3>
@@ -41,13 +67,21 @@
 //           </div>
 //         </div>
 //       </div>
-//       <div id="home" className="d-flex" style={{ height: "100%" }}>
+//       <div id="home" className="d-flex position-relative" style={{ height: "100%" }}>
 //         <img
 //           src={Background}
+//           style={{ width: "100vw", height: "100%" }}
 //           className="img-fluid position-absolute z-1"
 //           alt=""
 //         />
-//         <div className="position-relative z-2 w-100 d-flex flex-column align-items-center" style={{height:"100vh"}}>
+        // <div
+        //   className="position-absolute w-100 h-100 z-2"
+        //   style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+        // ></div>
+//         <div
+//           className="position-relative z-3 w-100 d-flex flex-column align-items-center"
+//           style={{ height: "100vh" }}
+//         >
 //           <Home />
 //         </div>
 //       </div>
@@ -55,16 +89,12 @@
 //         <About />
 //       </div>
 //       <div id="trip" className="d-flex" style={{ height: "100vh" }}>
-//         {/* <Trip /> */}
+//         <Trip />
 //       </div>
-//       <div id="blog" className="d-flex bg-warning" style={{ height: "100vh" }}>
+//       <div id="blog" className="d-flex bg-light" style={{ height: "100vh" }}>
 //         <Blog />
 //       </div>
-//       <div
-//         id="reviewer"
-//         className="d-flex bg-primary"
-//         style={{ height: "100vh" }}
-//       >
+//       <div id="reviewer" className="d-flex" style={{ height: "100vh" }}>
 //         <Reviews />
 //       </div>
 //       <div className="d-flex bg-secondary" style={{ height: "45%" }}>
@@ -82,7 +112,7 @@ import Trip from "./Trip";
 import Blog from "./Blog";
 import Reviews from "./Reviews";
 import Footer from "./Footer";
-import Background from "../assets/picture.png";
+import Background from "../assets/home.png";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -111,7 +141,7 @@ function Header() {
         style={{
           backgroundColor: isScrolled ? "rgba(0, 60, 130, 1)" : "transparent",
           transition: "background-color 0.3s",
-          borderRadius:"0px 0px 16px 16px"
+          borderRadius: "0px 0px 16px 16px",
         }}
       >
         <div className="d-flex flex-row justify-content-between align-items-center mx-5 w-100">
@@ -138,42 +168,39 @@ function Header() {
             <a href="#blog" className="text-decoration-none text-light">
               Blog
             </a>
-            <a href="#reviewer" className="text-decoration-none text-light">
+            <a href="#reviews" className="text-decoration-none text-light">
               Reviews
             </a>
           </div>
         </div>
       </div>
-      <div id="home" className="d-flex" style={{ height: "100%" }}>
+      <div id="home" className="d-flex align-items-center " style={{ minHeight: "100vh" }}>
         <img
           src={Background}
-          className="img-fluid position-absolute z-1"
+          style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", zIndex: -1 }}
           alt=""
         />
         <div
-          className="position-relative z-2 w-100 d-flex flex-column align-items-center"
-          style={{ height: "100vh" }}
-        >
+          className="position-absolute w-100 h-100 z-2"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+        ></div>
+        <div className="w-100 position-relative z-3">
           <Home />
         </div>
       </div>
-      <div id="about" className="d-flex bg-light" style={{ height: "100vh" }}>
+      <div id="about" className="d-flex align-items-center bg-light" style={{ minHeight: "100vh" }}>
         <About />
       </div>
-      <div id="trip" className="d-flex" style={{ height: "100vh" }}>
+      <div id="trip" className="d-flex align-items-center" style={{ minHeight: "100vh" }}>
         <Trip />
       </div>
-      <div id="blog" className="d-flex bg-light" style={{ height: "100vh" }}>
+      <div id="blog" className="d-flex align-items-center bg-light" style={{ minHeight: "100vh" }}>
         <Blog />
       </div>
-      <div
-        id="reviewer"
-        className="d-flex"
-        style={{ height: "100vh" }}
-      >
+      <div id="reviews" className="d-flex align-items-center" style={{ minHeight: "100vh" }}>
         <Reviews />
       </div>
-      <div className="d-flex bg-secondary" style={{ height: "45%" }}>
+      <div className="d-flex bg-secondary" style={{ height: "100vh" }}>
         <Footer />
       </div>
     </>

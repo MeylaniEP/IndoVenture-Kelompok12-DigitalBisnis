@@ -14,16 +14,20 @@ function About() {
   };
 
   return (
-    <div className="d-flex flex-row justify-content-evenly align-items-center w-100 text-dark fw-bold fs-1" style={{height:"100%", marginTop:"2em"}}>
+    <div
+      className="d-flex flex-column flex-md-row justify-content-evenly align-items-center w-100 text-dark fw-bold fs-1"
+      style={{ height: "100%", marginTop: "2em" }}
+    >
       <div
-        className="d-flex flex-column justify-content-start align-items-start"
-        style={{ width: "30%" }}
+        className="d-flex flex-column justify-content-start align-items-start text-center text-md-start px-3 px-md-0"
+        style={{ width: "100%", maxWidth: "500px" }}
       >
-        <h1>Cara Terbaik untuk Berpergian</h1>
+        <h1 className="display-5 display-md-4 fw-bold">
+          Cara Terbaik untuk Berpergian
+        </h1>
         <p
-          className=""
+          className="mt-3 fs-6 fs-md-5"
           style={{
-            fontSize: "0.3em",
             fontWeight: "normal",
             textAlign: "justify",
           }}
@@ -34,10 +38,9 @@ function About() {
           ingin membantu klien kami menciptakan kenangan yang akan bertahan
           seumur hidup.
         </p>
-        {/* <p
-          className=""
+        <p
+          className="mt-3 fs-6 fs-md-5"
           style={{
-            fontSize: "0.3em",
             fontWeight: "normal",
             textAlign: "justify",
           }}
@@ -47,22 +50,41 @@ function About() {
           pemahaman mendalam tentang budaya dan destinasi yang berbeda, dan kami
           dapat membantu Anda merencanakan perjalanan yang sempurna sesuai
           kebutuhan dan minat Anda.
-        </p> */}
-        <div className="d-flex flex-row justify-content-between w-100">
+        </p>
+        <div className="d-flex flex-row justify-content-between w-100 mt-4">
           <div>
-            <h3 className="m-0">800+</h3>
-            <p style={{fontWeight:"normal", fontSize:"0.4em", margin:"0px"}}>Clients</p>
+            <h3 className="m-0 fs-5 fs-md-3">800+</h3>
+            <p
+              className="fs-6 fs-md-5"
+              style={{ fontWeight: "normal", margin: "0px" }}
+            >
+              Clients
+            </p>
           </div>
           <div>
-            <h3 className="m-0">200+</h3>
-            <p style={{fontWeight:"normal", fontSize:"0.4em", margin:"0px"}}>Trips</p>
+            <h3 className="m-0 fs-5 fs-md-3">200+</h3>
+            <p
+              className="fs-6 fs-md-5"
+              style={{ fontWeight: "normal", margin: "0px" }}
+            >
+              Trips
+            </p>
           </div>
         </div>
-        <div className="contact-us mt-5 px-5 py-2" style={{border:"rgba(0, 60, 130, 1) solid 2px", borderRadius:"25px"}}>
-          <h5 className="contact" >Contact Us</h5>
-        </div>
+        <a
+          className="contact-us mt-5 px-5 py-2"
+          style={{
+            textDecoration: "none",
+            color: "black",
+            border: "rgba(0, 60, 130, 1) solid 2px",
+            borderRadius: "25px",
+          }}
+          href="https://chat.whatsapp.com/FOFe150b4XPL59YvWWM7C3"
+        >
+            <h5 className=" m-0">Contact Us</h5>
+        </a>
       </div>
-      <div>
+      <div className="mt-4 mt-md-0">
         <div
           style={{
             border: "rgba(0, 60, 130, 1) solid 1px",
@@ -72,7 +94,8 @@ function About() {
         >
           <img
             style={{
-              maxWidth: "300px",
+              maxWidth: "100%",
+              width: "300px",
               transform: isHovered ? "scale(1.1)" : "scale(1)",
               transition: "transform 0.3s",
             }}
@@ -94,6 +117,37 @@ function About() {
         background-color: rgba(0, 60, 130, 1);
         cursor: pointer;
         color: white;
+      }
+
+      @media (max-width: 576px) {
+        .fs-1 {
+          font-size: 1.5rem;
+        }
+        .fs-5 {
+          font-size: 1rem;
+        }
+        .fs-6 {
+          font-size: 0.875rem;
+        }
+        .display-5 {
+          font-size: 2.5rem;
+        }
+        .about{
+        display: flex;
+        flex: column-reverse;
+        }
+      }
+
+      @media (min-width: 577px) {
+        .fs-md-3 {
+          font-size: 1.75rem;
+        }
+        .fs-md-5 {
+          font-size: 1.25rem;
+        }
+        .display-md-4 {
+          font-size: 2rem;
+        }
       }
       `}</style>
     </div>

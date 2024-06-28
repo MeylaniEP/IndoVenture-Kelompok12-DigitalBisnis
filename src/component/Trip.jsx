@@ -1,7 +1,8 @@
 import React from "react";
-import Lombok from "../assets/lombo2.jpeg";
-import NTT from "../assets/ntt.png";
-
+import Lombok from "../assets/labengki.png";
+import Labengki from "../assets/labengki2.png";
+import NTT from "../assets/sambori.png";
+import Bali from "../assets/bali.jpg"
 function Trip() {
   const handleBookingClick = (destination) => {
     alert(`Booking for ${destination} initiated!`);
@@ -12,7 +13,7 @@ function Trip() {
     <div className="d-flex justify-content-center align-items-center w-100 fs-1 p-3">
       <div className="overflow-auto no-scrollbar" style={{ maxWidth: "100%" }}>
         <div
-          className="d-flex flex-column flex-lg-row justify-content-center align-items-center"
+          className="trip d-flex flex-column flex-lg-row justify-content-center align-items-center"
           style={{ width: "100%" }}
         >
           <div
@@ -78,7 +79,7 @@ function Trip() {
                 alt="Lombok"
               />
               <div className="overlay">
-                <h4>Lombok</h4>
+                <h4>Labengki</h4>
                 <p>Rp 5 Jt</p>
                 <button className="tombol btn btn-primary" onClick={() => handleBookingClick('Lombok')}>Book Now</button>
               </div>
@@ -109,7 +110,7 @@ function Trip() {
                 alt="NTT"
               />
               <div className="overlay">
-                <h4>NTT</h4>
+                <h4>Sambori</h4>
                 <p>Rp 5 Jt</p>
                 <button className="tombol btn btn-primary" onClick={() => handleBookingClick('NTT')}>Book Now</button>
               </div>
@@ -136,11 +137,42 @@ function Trip() {
                   borderRadius: "15px",
                   transition: "all 0.3s ease-in-out",
                 }}
-                src={Lombok}
+                src={Bali}
                 alt="Lombok"
               />
               <div className="overlay">
-                <h4>Lombok</h4>
+                <h4>Bali</h4>
+                <p>Rp 5 Jt</p>
+                <button className=" tombol btn btn-primary" onClick={() => handleBookingClick('Lombok')}>Book Now</button>
+              </div>
+            </div>
+            <div
+              className="image-container d-flex flex-row align-items-center justify-content-center"
+              style={{
+                border: "rgba(0, 60, 130, 1) solid 1.5px",
+                borderRadius: "20px",
+                height: "30rem",
+                width: "20rem",
+                flexShrink: 0,
+                overflow: "hidden",
+                position: "relative",
+              }}
+            >
+              <div className="backdrop"></div>
+              <img
+                className="image"
+                style={{
+                  objectFit: "cover",
+                  height: "94%",
+                  width: "90%",
+                  borderRadius: "15px",
+                  transition: "all 0.3s ease-in-out",
+                }}
+                src={Labengki}
+                alt="Lombok"
+              />
+              <div className="overlay">
+                <h4>Labengki</h4>
                 <p>Rp 5 Jt</p>
                 <button className=" tombol btn btn-primary" onClick={() => handleBookingClick('Lombok')}>Book Now</button>
               </div>
@@ -232,6 +264,10 @@ function Trip() {
           .text-justify {
             text-align: justify;
           }
+            .trip{
+            display: flex;
+            flex: column;
+            }
         }
 
         @media (min-width: 577px) and (max-width: 768px) {

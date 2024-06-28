@@ -1,8 +1,8 @@
 import React from "react";
-import A from "../assets/a.png";
-import B from "../assets/b.png";
-import C from "../assets/c.png";
-import D from "../assets/d.png";
+import A from "../assets/home.png";
+import B from "../assets/rev1.png";
+import C from "../assets/rev2.png";
+import D from "../assets/rev3.png";
 
 function Blog() {
   return (
@@ -37,8 +37,9 @@ function Blog() {
               alt="Lombok"
             />
             <div className="overlay text-start mx-3 mb-3">
-              <h4>Lombok</h4>
-              <p> 45 Travelers</p>
+              <h4>Sambori</h4>
+              <p className="m-0 p-0"> ~ 2 trips</p>
+              <p className="m-0 p-0"> ~ 2 travelers</p>
             </div>
           </div>
         <div className="d-flex flex-column gap-3">
@@ -68,8 +69,9 @@ function Blog() {
               alt="Lombok"
             />
             <div className="overlay text-start mx-3 mb-3">
-              <h4>Lombok</h4>
-              <p> 45 Travelers</p>
+              <h4>Wakatobi</h4>
+              <p className="m-0 p-0"> ~ 2 trips</p>
+              <p className="m-0 p-0"> ~ 2 travelers</p>
             </div>
           </div>
           <div className="d-flex felx-row gap-3" style={{gap:"2em"}}>
@@ -99,8 +101,9 @@ function Blog() {
               alt="Lombok"
             />
             <div className="overlay text-start mx-3 mb-3">
-              <h4>Lombok</h4>
-              <p> 45 Travelers</p>
+              <h4>Labengki</h4>
+              <p className="m-0 p-0"> ~ 2 trips</p>
+              <p className="m-0 p-0"> ~ 2 travelers</p>
             </div>
           </div>
           <div
@@ -129,8 +132,9 @@ function Blog() {
               alt="Lombok"
             />
             <div className="overlay text-start mx-3 mb-3">
-              <h4>Lombok</h4>
-              <p> 45 Travelers</p>
+            <h4>Labengki</h4>
+              <p className="m-0 p-0"> ~ 2 trips</p>
+              <p className="m-0 p-0"> ~ 2 travelers</p>
             </div>
           </div>
           </div>
