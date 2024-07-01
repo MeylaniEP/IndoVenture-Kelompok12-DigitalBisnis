@@ -90,7 +90,7 @@ function Header() {
       <div id="reviews" className="d-flex align-items-center" style={{ minHeight: "100vh" }}>
         <Reviews />
       </div>
-      <div className="d-flex bg-secondary" style={{ height: "100vh" }}>
+      <div className="d-flex bg-secondary" style={{ height: "100%" }}>
         <Footer />
       </div>
       <style>
