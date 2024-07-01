@@ -85,7 +85,7 @@ function Header() {
         <Trip />
       </div>
       <div id="blog" className="d-flex align-items-center bg-light" style={{ minHeight: "100vh" }}>
-        {/* <Blog /> */}
+        <Blog />
       </div>
       <div id="reviews" className="d-flex align-items-center" style={{ minHeight: "100vh" }}>
         <Reviews />

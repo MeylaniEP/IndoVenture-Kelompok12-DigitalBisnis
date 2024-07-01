@@ -10,38 +10,38 @@ function Blog() {
       <div className="mb-4">
         <h2>Travel Memories</h2>
       </div>
-      <div className="d-flex flex-row  justify-content-start gap-3">
-          <div
-            className="image-container d-flex flex-row align-items-center justify-content-center"
+      <div className="d-flex flex-row flex-wrap justify-content-start gap-3 large-screen-layout">
+        <div
+          className="image-container d-flex flex-row align-items-center justify-content-center "
+          style={{
+            border: "rgba(0, 60, 130, 1) solid 1.5px",
+            borderRadius: "20px",
+            height: "30rem",
+            width: "20rem",
+            flexShrink: 0,
+            overflow: "hidden",
+            position: "relative",
+          }}
+        >
+          <div className="backdrop"></div>
+          <img
+            className="image"
             style={{
-              border: "rgba(0, 60, 130, 1) solid 1.5px",
-              borderRadius: "20px",
-              height: "30rem",
-              width: "20rem",
-              flexShrink: 0,
-              overflow: "hidden",
-              position: "relative",
+              objectFit: "cover",
+              height: "95%",
+              width: "93%",
+              borderRadius: "15px",
+              transition: "all 0.3s ease-in-out",
             }}
-          >
-            <div className="backdrop"></div>
-            <img
-              className="image"
-              style={{
-                objectFit: "cover",
-                height: "95%",
-                width: "93%",
-                borderRadius: "15px",
-                transition: "all 0.3s ease-in-out",
-              }}
-              src={D}
-              alt="Lombok"
-            />
-            <div className="overlay text-start mx-3 mb-3">
-              <h4>Sambori</h4>
-              <p className="m-0 p-0"> ~ 2 trips</p>
-              <p className="m-0 p-0"> ~ 2 travelers</p>
-            </div>
+            src={D}
+            alt="Lombok"
+          />
+          <div className="overlay text-start mx-3 mb-3">
+            <h4>Sambori</h4>
+            <p className="m-0 p-0"> ~ 2 trips</p>
+            <p className="m-0 p-0"> ~ 2 travelers</p>
           </div>
+        </div>
         <div className="d-flex flex-column gap-3">
           <div
             className="image-container d-flex flex-row align-items-center justify-content-center"
@@ -74,76 +74,89 @@ function Blog() {
               <p className="m-0 p-0"> ~ 2 travelers</p>
             </div>
           </div>
-          <div className="d-flex felx-row gap-3" style={{gap:"2em"}}>
+          <div className="d-flex flex-row flex-wrap gap-3" style={{ gap: "2em" }}>
             <div
-            className="image-container d-flex flex-row align-items-center justify-content-center"
-            style={{
-              border: "rgba(0, 60, 130, 1) solid 1.5px",
-              borderRadius: "20px",
-              height: "15rem",
-              width: "19.5rem",
-              flexShrink: 0,
-              overflow: "hidden",
-              position: "relative",
-            }}
-          >
-            <div className="backdrop"></div>
-            <img
-              className="image"
+              className="image-container d-flex flex-row align-items-center justify-content-center"
               style={{
-                objectFit: "cover",
-                height: "94%",
-                width: "94%",
-                borderRadius: "15px",
-                transition: "all 0.3s ease-in-out",
+                border: "rgba(0, 60, 130, 1) solid 1.5px",
+                borderRadius: "20px",
+                height: "15rem",
+                width: "19.5rem",
+                flexShrink: 0,
+                overflow: "hidden",
+                position: "relative",
               }}
-              src={B}
-              alt="Lombok"
-            />
-            <div className="overlay text-start mx-3 mb-3">
-              <h4>Labengki</h4>
-              <p className="m-0 p-0"> ~ 2 trips</p>
-              <p className="m-0 p-0"> ~ 2 travelers</p>
+            >
+              <div className="backdrop"></div>
+              <img
+                className="image"
+                style={{
+                  objectFit: "cover",
+                  height: "94%",
+                  width: "94%",
+                  borderRadius: "15px",
+                  transition: "all 0.3s ease-in-out",
+                }}
+                src={B}
+                alt="Lombok"
+              />
+              <div className="overlay text-start mx-3 mb-3">
+                <h4>Labengki</h4>
+                <p className="m-0 p-0"> ~ 2 trips</p>
+                <p className="m-0 p-0"> ~ 2 travelers</p>
+              </div>
             </div>
-          </div>
-          <div
-            className="image-container d-flex flex-row align-items-center justify-content-center"
-            style={{
-              border: "rgba(0, 60, 130, 1) solid 1.5px",
-              borderRadius: "20px",
-              height: "15rem",
-              width: "19.5rem",
-              flexShrink: 0,
-              overflow: "hidden",
-              position: "relative",
-            }}
-          >
-            <div className="backdrop"></div>
-            <img
-              className="image"
+            <div
+              className="image-container d-flex flex-row align-items-center justify-content-center"
               style={{
-                objectFit: "cover",
-                height: "94%",
-                width: "94%",
-                borderRadius: "15px",
-                transition: "all 0.3s ease-in-out",
+                border: "rgba(0, 60, 130, 1) solid 1.5px",
+                borderRadius: "20px",
+                height: "15rem",
+                width: "19.5rem",
+                flexShrink: 0,
+                overflow: "hidden",
+                position: "relative",
               }}
-              src={A}
-              alt="Lombok"
-            />
-            <div className="overlay text-start mx-3 mb-3">
-            <h4>Labengki</h4>
-              <p className="m-0 p-0"> ~ 2 trips</p>
-              <p className="m-0 p-0"> ~ 2 travelers</p>
+            >
+              <div className="backdrop"></div>
+              <img
+                className="image"
+                style={{
+                  objectFit: "cover",
+                  height: "94%",
+                  width: "94%",
+                  borderRadius: "15px",
+                  transition: "all 0.3s ease-in-out",
+                }}
+                src={A}
+                alt="Lombok"
+              />
+              <div className="overlay text-start mx-3 mb-3">
+                <h4>Labengki</h4>
+                <p className="m-0 p-0"> ~ 2 trips</p>
+                <p className="m-0 p-0"> ~ 2 travelers</p>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
       <style>{`
-      .overlay{
-      bacground-color: none;
-      }
+        .overlay {
+          background-color: none;
+        }
+        @media (max-width: 768px) {
+          .large-screen-layout {
+            flex-direction: column;
+          }
+          .large-screen-layout > div {
+            width: 100% !important;
+            height: auto !important;
+          }
+          .image-container {
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
       `}</style>
     </div>
   );
