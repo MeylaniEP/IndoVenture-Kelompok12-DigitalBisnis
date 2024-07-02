@@ -48,14 +48,15 @@ function Footer() {
             <p className="fw-light fs-6 mb-0">akan memberi Anda diskon 10% pada perjalanan pertama Anda bersama kami!</p>
           </div>
           <div className="contact-button d-flex justify-content-center align-items-center w-100">
-            <div className="contact-us mt-5 px-5 py-2" 
-              style={{border: "white solid 2px", borderRadius: "25px"}}>
+            <a href="https://api.whatsapp.com/message/W4FYFSIGIPK2F1?autoload=1&app_absent=0" className="contact-us mt-5 px-5 py-2" 
+              style={{border: "white solid 2px", borderRadius: "25px", textDecoration: 'none'}}>
               <h5 className="contact m-0">Contact Us</h5>
               <style>{`
                 .contact-us {
                   border: rgba(0, 60, 130, 1) solid 2px;
                   border-radius: 25px;
                   transition: background-color 0.3s, color 0.3s;
+                  color: white;
                 }
 
                 .contact-us:hover {
@@ -64,7 +65,7 @@ function Footer() {
                   color: black;
                 }
               `}</style>
-            </div>
+            </a>
           </div>
         </div>
       </div>

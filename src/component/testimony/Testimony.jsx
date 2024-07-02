@@ -26,7 +26,7 @@ function Testimony() {
     },
     {
       img: Fadlur,
-      name: "Fadlur 21.11.4349",
+      name: "Fadhlur 21.11.4349",
       text: "Outstanding service and very responsive. Thank you IndoVentures Travel!",
     },
   ];
@@ -65,10 +65,16 @@ function Testimony() {
         </div>
       ))}
       <div className="navigation d-lg-none d-flex justify-content-center">
-        <button onClick={handlePrev} className="nav-button d-flex flex-row align-items-center justify-content-center" style={{borderRadius:"100%", width:"40px", height:"40px", cursor:"pointer", backgroundColor:"white", border:"rgba(0, 60, 130, 1) solid 1px"}}>
-          <IoIosArrowBack className="text-dark"/>
+        <button
+          onClick={handlePrev}
+          className="nav-button d-flex flex-row align-items-center justify-content-center"
+        >
+          <IoIosArrowBack className="text-dark" />
         </button>
-        <button onClick={handleNext} className="nav-button d-flex flex-row align-items-center justify-content-center" style={{borderRadius:"100%", width:"40px", height:"40px", cursor:"pointer", backgroundColor:"white", border:"rgba(0, 60, 130, 1) solid 1px"}}>
+        <button
+          onClick={handleNext}
+          className="nav-button d-flex flex-row align-items-center justify-content-center"
+        >
           <GrFormNext className="text-dark" />
         </button>
       </div>
@@ -118,16 +124,24 @@ function Testimony() {
         }
 
         .nav-button {
-          background-color: #007bff;
-          border: none;
+          background-color: white;
+          border: rgba(0, 60, 130, 1) solid 1px;
           color: white;
           padding: 10px;
-          border-radius: 5px;
+          border-radius: 100%;
           cursor: pointer;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s;
         }
 
         .nav-button:hover {
-          background-color: #0056b3;
+          transform: scale(1.1);
+          background-color: rgba(0, 60, 130, 1);
         }
 
         @media (max-width: 768px) {

@@ -4,6 +4,7 @@ import VideoOn from "../assets/videoOn.png";
 
 function About() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -11,6 +12,14 @@ function About() {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
+  };
+
+  const handleButtonMouseEnter = () => {
+    setIsButtonHovered(true);
+  };
+
+  const handleButtonMouseLeave = () => {
+    setIsButtonHovered(false);
   };
 
   return (
@@ -75,13 +84,20 @@ function About() {
           className="contact-us mt-5 px-5 py-2"
           style={{
             textDecoration: "none",
-            color: "black",
+            color: isButtonHovered ? "white" : "black",
             border: "rgba(0, 60, 130, 1) solid 2px",
             borderRadius: "25px",
+            display: "inline-block",
+            textAlign: "center",
+            width: "fit-content",
+            backgroundColor: isButtonHovered ? "rgba(0, 60, 130, 1)" : "transparent",
+            transition: "background-color 0.3s, color 0.3s",
           }}
           href="https://chat.whatsapp.com/FOFe150b4XPL59YvWWM7C3"
+          onMouseEnter={handleButtonMouseEnter}
+          onMouseLeave={handleButtonMouseLeave}
         >
-            <h5 className=" m-0">Contact Us</h5>
+          <h5 className="m-0">Contact Us</h5>
         </a>
       </div>
       <div className="mt-4 mt-md-0">
@@ -113,12 +129,6 @@ function About() {
         transition: background-color 0.3s, color 0.3s;
       }
       
-      .contact-us:hover {
-        background-color: rgba(0, 60, 130, 1);
-        cursor: pointer;
-        color: white;
-      }
-
       @media (max-width: 576px) {
         .fs-1 {
           font-size: 1.5rem;
@@ -132,9 +142,9 @@ function About() {
         .display-5 {
           font-size: 2.5rem;
         }
-        .about{
-        display: flex;
-        flex: column-reverse;
+        .contact-us {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
 
