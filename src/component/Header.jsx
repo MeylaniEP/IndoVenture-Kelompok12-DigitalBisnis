@@ -11,11 +11,13 @@ import { FaBars } from 'react-icons/fa';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSmall, setIsSmall] = useState(false)
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight = window.innerHeight / 2;
+
       if (window.scrollY > scrollHeight) {
         setIsScrolled(true);
       } else {
@@ -30,6 +32,18 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleSmall = () => {
+      if (window.innerWidth < 1024) {
+        setIsSmall(true);
+      } else {
+        setIsSmall(false);
+      }
+    };
+
+    handleSmall()
+  }, [window.innerWidth])
+  
   return (
     <>
       <Navbar
@@ -38,7 +52,7 @@ function Header() {
         expanded={expanded}
         onToggle={setExpanded}
         style={{
-          backgroundColor: isScrolled ? "rgba(0, 60, 130, 1)" : "transparent",
+          backgroundColor: (isScrolled || isSmall) ? "rgba(0, 60, 130, 1)" : "transparent",
           transition: "background-color 0.3s",
           borderRadius: "0px 0px 16px 16px",
         }}
