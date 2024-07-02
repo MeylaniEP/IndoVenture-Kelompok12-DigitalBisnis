@@ -10,7 +10,7 @@ function Blog() {
       <div className="mb-4">
         <h2>Travel Memories</h2>
       </div>
-      <div className="d-flex flex-row flex-wrap justify-content-start gap-3 large-screen-layout">
+      <div className="d-flex flex-row flex-wrap mx-3 justify-content-start gap-3 large-screen-layout">
         <div
           className="image-container d-flex flex-row align-items-center justify-content-center "
           style={{

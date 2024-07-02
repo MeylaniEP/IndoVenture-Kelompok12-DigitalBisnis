@@ -75,7 +75,7 @@ function FilterDropdown() {
               <Dropdown.Item
                 key={index}
                 eventKey={country}
-                onSelect={handleSelect}
+                onClick={() => handleSelect(country)}
               >
                 {country}
               </Dropdown.Item>
@@ -190,13 +190,13 @@ function FilterDropdown() {
           display: none;
         }
         .custom-ellipsis {
-  display: inline-block;
-  max-width: 100%; /* Adjust as needed */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-}
+          display: inline-block;
+          max-width: 100%; /* Adjust as needed */
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+        }
 
         .custom-dropdown-toggle {
           display: flex;

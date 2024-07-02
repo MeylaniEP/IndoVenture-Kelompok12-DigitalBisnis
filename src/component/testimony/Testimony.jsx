@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Meylani from "../../assets/Meylani.jpeg";
 import Aviva from "../../assets/aviva (1).jpeg";
 import Nabiila from "../../assets/nabiila (1).jpg";
@@ -8,6 +8,7 @@ import { GrFormNext } from "react-icons/gr";
 
 function Testimony() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [animationClass, setAnimationClass] = useState("");
   const testimonials = [
     {
       img: Meylani,
@@ -31,14 +32,32 @@ function Testimony() {
     },
   ];
 
+  useEffect(() => {
+    if (animationClass) {
+      const timer = setTimeout(() => {
+        setAnimationClass("");
+      }, 400); // Durasi animasi harus sesuai dengan CSS
+
+      return () => clearTimeout(timer);
+    }
+  }, [animationClass]);
+
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    setAnimationClass("slide-out-left");
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      setAnimationClass("slide-in-right");
+    }, 300); // Durasi animasi harus sesuai dengan CSS
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    setAnimationClass("slide-out-right");
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      );
+      setAnimationClass("slide-in-left");
+    }, 500); // Durasi animasi harus sesuai dengan CSS
   };
 
   return (
@@ -46,7 +65,7 @@ function Testimony() {
       {testimonials.map((testimonial, index) => (
         <div
           className={`testimony-card bg-light ${
-            index === currentIndex ? "active" : ""
+            index === currentIndex ? `active ${animationClass}` : ""
           }`}
           key={index}
         >
@@ -161,6 +180,66 @@ function Testimony() {
           .navigation {
             display: flex;
             gap: 10px;
+          }
+        }
+
+        .slide-in-left {
+          animation: slide-in-left 0.5s forwards;
+        }
+
+        .slide-in-right {
+          animation: slide-in-right 0.5s forwards;
+        }
+
+        .slide-out-left {
+          animation: slide-out-left 0.5s forwards;
+        }
+
+        .slide-out-right {
+          animation: slide-out-right 0.5s forwards;
+        }
+
+        @keyframes slide-in-left {
+          0% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slide-in-right {
+          0% {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slide-out-left {
+          0% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+        }
+
+        @keyframes slide-out-right {
+          0% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(100%);
+            opacity: 0;
           }
         }
       `}</style>
