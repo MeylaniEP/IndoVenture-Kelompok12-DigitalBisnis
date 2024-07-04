@@ -5,7 +5,7 @@ import NTT from "../assets/sambori.png";
 import Bali from "../assets/bali.jpg"
 function Trip() {
   const handleBookingClick = (destination) => {
-    const whatsappLink = `https://chat.whatsapp.com/FOFe150b4XPL59YvWWM7C3`;
+    const whatsappLink = `https://api.whatsapp.com/message/W4FYFSIGIPK2F1?autoload=1&app_absent=0`;
     window.open(whatsappLink, '_blank');
   };
   

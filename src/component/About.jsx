@@ -93,7 +93,7 @@ function About() {
             backgroundColor: isButtonHovered ? "rgba(0, 60, 130, 1)" : "transparent",
             transition: "background-color 0.3s, color 0.3s",
           }}
-          href="https://chat.whatsapp.com/FOFe150b4XPL59YvWWM7C3"
+          href="https://api.whatsapp.com/message/W4FYFSIGIPK2F1?autoload=1&app_absent=0"
           onMouseEnter={handleButtonMouseEnter}
           onMouseLeave={handleButtonMouseLeave}
         >
