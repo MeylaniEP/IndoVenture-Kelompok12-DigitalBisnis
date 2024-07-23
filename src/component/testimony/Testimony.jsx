@@ -103,7 +103,7 @@ function Testimony() {
           flex-wrap: wrap;
           justify-content: center;
           gap: 20px;
-          margin-bottom: 3em;
+          margin-bottom: 2em;
         }
 
         .testimony-card {

@@ -11,7 +11,7 @@ import { FaBars } from 'react-icons/fa';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isSmall, setIsSmall] = useState(false)
+  const [isSmall, setIsSmall] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
@@ -41,9 +41,13 @@ function Header() {
       }
     };
 
-    handleSmall()
-  }, [window.innerWidth])
-  
+    handleSmall();
+  }, [window.innerWidth]);
+
+  const handleNavClick = () => {
+    setExpanded(false);
+  };
+
   return (
     <>
       <Navbar
@@ -61,19 +65,19 @@ function Header() {
           <Navbar.Brand className="text-light" href="#home">
             IndoVentures
           </Navbar.Brand>
-          <Navbar.Toggle 
-            aria-controls="basic-navbar-nav" 
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
             onClick={() => setExpanded(!expanded)}
           >
             <FaBars color="white" />
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="custom-navbar">
-              <Nav.Link href="#home" className="text-light">Home</Nav.Link>
-              <Nav.Link href="#about" className="text-light">About</Nav.Link>
-              <Nav.Link href="#trip" className="text-light">Trip</Nav.Link>
-              <Nav.Link href="#blog" className="text-light">Blog</Nav.Link>
-              <Nav.Link href="#reviews" className="text-light">Reviews</Nav.Link>
+              <Nav.Link href="#home" className="menu text-light" onClick={handleNavClick}>Home</Nav.Link>
+              <Nav.Link href="#about" className="menu text-light" onClick={handleNavClick}>About</Nav.Link>
+              <Nav.Link href="#trip" className="menu text-light" onClick={handleNavClick}>Trip</Nav.Link>
+              <Nav.Link href="#blog" className="menu text-light" onClick={handleNavClick}>Blog</Nav.Link>
+              <Nav.Link href="#reviews" className="menu text-light" onClick={handleNavClick}>Reviews</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -109,10 +113,15 @@ function Header() {
       </div>
       <style>
         {`
-        .custom-navbar{
-        border: white solid 1px;
-        border-radius: 20px;
-        padding: 0px 25px;
+        .custom-navbar {
+          border: white solid 1px;
+          border-radius: 20px;
+          padding: 0px 25px;
+        }
+          @media (max-width: 768px) {
+          .custom-navbar {
+            border: transparent solid 1px;
+          }
         }
         `}
       </style>
