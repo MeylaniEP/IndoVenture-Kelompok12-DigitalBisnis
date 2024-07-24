@@ -111,7 +111,7 @@ function Testimony() {
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           overflow: hidden;
-          width: 300px;
+          width: 230px;
           display: flex;
           flex-direction: column;
           align-items: center;

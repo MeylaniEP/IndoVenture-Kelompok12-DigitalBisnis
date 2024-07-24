@@ -14,9 +14,9 @@ function Reviews() {
             <Testimony />
           </div>
         </div>
-        <div style={{ width: "100" }} className="mb-3">
+        {/* <div style={{ width: "100%" }} className="mb-3">
           <Comentar />
-        </div>
+        </div> */}
       </div>
     </>
   );

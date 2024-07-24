@@ -6,9 +6,9 @@ import NTT from "../assets/sambori.png";
 import Bali from "../assets/bali.jpg";
 
 const destinations = [
+  { id: 3, name: "Bali", price: "Rp 5 Jt", image: Bali },
   { id: 1, name: "Labengki", price: "Rp 5 Jt", image: Lombok },
   { id: 2, name: "Sambori", price: "Rp 5 Jt", image: NTT },
-  { id: 3, name: "Bali", price: "Rp 5 Jt", image: Bali },
   { id: 4, name: "Labengki", price: "Rp 5 Jt", image: Labengki },
 ];
 
