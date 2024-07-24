@@ -1,6 +1,5 @@
 import React from "react";
 import Testimony from "./testimony/Testimony";
-import Comentar from "./review/Comentar";
 
 function Reviews() {
   return (
@@ -14,9 +13,6 @@ function Reviews() {
             <Testimony />
           </div>
         </div>
-        {/* <div style={{ width: "100%" }} className="mb-3">
-          <Comentar />
-        </div> */}
       </div>
     </>
   );
